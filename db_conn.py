@@ -2,7 +2,6 @@ import pypyodbc as db
 import pandas as pd
 import cn_str
 
-#getting connection string specific to local path / servers in cn_str lib.
 cn_str = cn_str.get_cn_str()
 
 def get_tbl_list():
