@@ -10,3 +10,4 @@ def get_tbl_list():
     df = pd.io.sql.read_sql(qry, con=cn)
     cn.close()
     return df
+    
