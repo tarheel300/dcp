@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("button").click(function(){
+          $.ajax({
+            url: "{% url 'index' %}",
+            type: 'get',
+            success: function(data){
+              $("#d1").html(data);
+            },
+            failure: function(data){
+              alert('Got an error.');
+            }});
+          });
+      });
+
+    </script>
+  </head>
+  <h1>Testing out this ajax stuff</h1>
+  <div id="d1">PLACEHOLDER</div>
+    <button> Get Other Page</button>
+
+
+</html>

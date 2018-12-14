@@ -9,3 +9,6 @@ def index(request):
     vals = list(df['disp_nm'])
     tbl_dict = dict(zip(keys,vals))
     return render(request, 'index.html', {'tbls':tbl_dict.items()})
+
+def test(request):
+    return render(request, 'test.html')
