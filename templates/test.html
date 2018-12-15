@@ -6,8 +6,11 @@
       $(document).ready(function(){
         $("button").click(function(){
           $.ajax({
-            url: "{% url 'index' %}",
+            url: "{% url 'grid' %}",
             type: 'get',
+            data: {
+              disp_nm: 'CB....'
+            },
             success: function(data){
               $("#d1").html(data);
             },

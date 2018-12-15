@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    {% for col in col_nms %}
+      <th>{{col}}</th>
+    {% endfor %}
+  </tr>
+  {% for row in row_data %}
+    <tr>
+      {% for k, v in row.items %}
+        {% if k != 'index' %}
+          <td>{{ v }}</td>
+        {% endif %}
+      {% endfor %}
+    </tr>
+  {% endfor %}
+</table>
